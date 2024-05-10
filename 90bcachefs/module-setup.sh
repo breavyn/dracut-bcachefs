@@ -11,7 +11,7 @@ depends() {
 }
 
 install() {
-    inst bcachefs
+    inst_multiple bcachefs keyctl
 
     inst_hook cmdline 90 "$moddir/parse-cmdline.sh"
     inst_hook pre-mount 90 "$moddir/unlock.sh"
